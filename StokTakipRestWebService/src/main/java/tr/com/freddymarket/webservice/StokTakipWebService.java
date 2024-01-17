@@ -7,15 +7,18 @@ import java.util.*;
 @RequestMapping("/urun")
 public class StokTakipWebService {
 	
-	private static final List<String> URUN_LISTESI = new ArrayList<>();
+	record Urun (String ad, int stok) {}
+	
+	private static final List<Urun> URUN_LISTESI = new ArrayList<>();
 	
 	static {
-		URUN_LISTESI.add("Bakliyat");
-		URUN_LISTESI.add("Sebze");
+		URUN_LISTESI.add(new Urun("Bakliyat", 5));
+		URUN_LISTESI.add(new Urun("Sebze", 23));
+		URUN_LISTESI.add(new Urun("Icecek", 251));
 	}
 	
 	@GetMapping("/")
-	public List<String> listele(){
+	public List<Urun> listele(){
 		return URUN_LISTESI;
 	}
 	
