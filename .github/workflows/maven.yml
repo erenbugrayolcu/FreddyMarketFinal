@@ -25,5 +25,5 @@ jobs:
       id: jacoco
       uses: madrapps/jacoco-report@v1.3
       with:
-        paths: ${{ github.workspace }}/BirimTestOrnek1/target/site/jacoco/jacoco.xml
+        paths: ${{ github.workspace }}/StokTakipRestWebService/target/site/jacoco/jacoco.xml
         token: ${{ secrets.GITHUB_TOKEN }}
